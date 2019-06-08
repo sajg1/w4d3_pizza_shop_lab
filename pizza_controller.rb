@@ -52,6 +52,6 @@ end
 
 # SHOW
 get '/pizza-orders/:id' do
-  @order = PizzaOrder.find(params[:id].to_i)
+  @order = PizzaOrder.find_by_id(params[:id].to_i)
   erb(:show)
 end
